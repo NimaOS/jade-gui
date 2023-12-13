@@ -15,7 +15,7 @@
             <property
               name="title"
               translatable="true">Select Keyboard Layout</property>
-            <property name="description">You can add additional layouts later.</property>
+            <property name="description" translatable="true">You can add additional layouts later.</property>
             <property name="css-classes">jade_compact</property>
             <child>
               <object class="GtkBox">
@@ -69,11 +69,11 @@
 
                     <child>
                       <object class="AdwPreferencesGroup" id="preview">
-                        <property name="title">Preview</property>
+                        <property name="title" translatable="true">Preview</property>
 
                         <child>
                           <object class="AdwEntryRow">
-                            <property name="title">Test your Keyboard</property>
+                            <property name="title" translatable="true">Test your Keyboard</property>
                           </object>
                         </child>
                       </object>

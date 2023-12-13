@@ -22,6 +22,13 @@
                 <child>
                   <object class="AdwPreferencesGroup">
                     <child>
+                      <object class="AdwEntryRow" id="fullname_entry">
+                        <property
+                          name="title"
+                          translatable="true">Full Name</property>
+                      </object>
+                    </child>
+                    <child>
                       <object class="AdwEntryRow" id="username_entry">
                         <property
                           name="title"
@@ -58,7 +65,8 @@
                               name="title"
                               translatable="true">Adminstrator</property>
                             <property
-                              name="subtitle">Allows access to system settings, users, and sudo</property>
+                              name="subtitle"
+                              translatable="true">Allows access to system settings, users, and sudo</property>
                             <child>
                               <object class="GtkSwitch" id="enable_sudo_switch">
                                 <property name="valign">center</property>
@@ -73,11 +81,11 @@
                 </child>
                 <child>
                   <object class="AdwPreferencesGroup">
-                    <property name="title">System</property>
+                    <property name="title" translatable="true">System</property>
                       <child>
                         <object class="AdwActionRow">
                           <property name="title" translatable="true">Enable Superuser Account</property>
-                          <property name="subtitle">Allow logging into the root account</property>
+                          <property name="subtitle" translatable="true">Allow logging into the root account</property>
                           <child>
                             <object class="GtkSwitch" id="enable_root_switch">
                               <property name="valign">center</property>

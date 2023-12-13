@@ -14,7 +14,7 @@
             <property name="vexpand">true</property>
             <property name="title" translatable="true">Summary</property>
             <property
-              name="description">Last chance to verify everything.</property>
+              name="description" translatable="true">Last chance to verify everything.</property>
             <property name="css-classes">jade_compact</property>
             <child>
               <object class="AdwPreferencesPage">

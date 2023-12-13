@@ -23,10 +23,10 @@
 
         <child>
           <object class="AdwStatusPage">
-            <property name="title" translatable="yes">Welcome to Crystal Linux</property>
+            <property name="title" translatable="yes">Welcome to NimaOS</property>
             <property
               name="description"
-              translatable="yes">Press Start to start installing Crystal Linux!</property>
+              translatable="yes">Press Start to start installing NimaOS!</property>
           </object>
         </child>
 
@@ -48,7 +48,7 @@
             </child>
             <child>
               <object class="GtkButton" id="next_button">
-                <property name="label">Start</property>
+                <property name="label" translatable="yes">Start</property>
                 <!-- <property name="sensitive">False</property> -->
                 <style>
                   <class name="suggested-action"/>

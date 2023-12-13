@@ -28,6 +28,7 @@ from jade_gui.classes.jade_screen import JadeScreen
 class UserScreen(JadeScreen, Adw.Bin):
     __gtype_name__ = "UserScreen"
 
+    fullname_entry = Gtk.Template.Child()
     username_entry = Gtk.Template.Child()
     password_entry = Gtk.Template.Child()
     password_confirmation = Gtk.Template.Child()
@@ -48,11 +49,22 @@ class UserScreen(JadeScreen, Adw.Bin):
         self.root_enabled = True
         self.enable_root_switch.set_active(self.root_enabled)
         self.enable_sudo_switch.set_active(self.sudo_enabled)
+
+        self.fullname_entry.connect("changed", self.transform_to_username)
+
         self.username_entry.connect("changed", self.username_passes_regex)
         self.enable_root_switch.connect("state-set", self.enable_root_user)
         self.enable_sudo_switch.connect("state-set", self.enable_sudo)
         self.password_entry.connect("changed", self.verify_password)
         self.password_confirmation.connect("changed", self.verify_password)
+
+    def transform_to_username(self, widget):
+        input = self.fullname_entry.get_text()
+
+        username = "".join(input.split(" ")).lower()
+        print(username)
+
+        self.username_entry.set_text(username)
 
     def username_passes_regex(self, widget):
         input = self.username_entry.get_text()

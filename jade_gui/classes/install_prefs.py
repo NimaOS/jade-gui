@@ -28,6 +28,7 @@ class InstallPrefs:
         locale,
         layout,
         variant,
+        fullname,
         username,
         password,
         enable_sudo,
@@ -43,6 +44,7 @@ class InstallPrefs:
         self.locale = locale
         self.layout = layout
         self.variant = variant
+        self.fullname = fullname
         self.username = username
         self.password = password
         self.enable_sudo = enable_sudo
@@ -50,7 +52,7 @@ class InstallPrefs:
             self.disk = disk.disk
         else:
             self.disk = ""
-        self.hostname = hostname if len(hostname) != 0 else "crystal"
+        self.hostname = hostname if len(hostname) != 0 else "NimaOS"
         self.timeshift_enabled = timeshift_enabled
         self.zramd_enabled = zramd_enabled
         self.desktop = desktop
@@ -81,6 +83,7 @@ class InstallPrefs:
             "users": [
                 {
                     "name": self.username,
+                    "fullname": self.fullname,
                     "password": self.password,
                     "hasroot": self.enable_sudo,
                     "shell": "bash",
@@ -89,7 +92,6 @@ class InstallPrefs:
             "rootpass": self.password,
             "desktop": self.desktop.lower(),
             "timeshift": self.timeshift_enabled,
-            "extra_packages": ["firefox"],
             "flatpak": True,
             "zramd": self.zramd_enabled,
             "unakite": {

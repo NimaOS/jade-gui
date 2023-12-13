@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Install Crystal Linux"
+msgid "Install NimaOS"
+msgstr "Install NimaOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -30,12 +30,12 @@ msgid "About Jade GUI"
 msgstr "About Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Welcome to Crystal Linux"
+msgid "Welcome to NimaOS"
+msgstr "Welcome to NimaOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Press Start to start installing Crystal Linux!"
+msgid "Press Start to start installing NimaOS!"
+msgstr "Press Start to start installing NimaOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -44,6 +44,10 @@ msgstr "Select Desktop"
 #: src/pages/desktop_screen.ui:14
 msgid "You can install more desktops later."
 msgstr "You can install more desktops later."
+
+#: src/window.ui:86
+msgid "Back"
+msgstr "Back"
 
 #: src/pages/desktop_screen.ui:40 src/pages/keyboard_screen.ui:57
 #: src/pages/language_screen.ui:57 src/pages/misc_screen.ui:81
@@ -56,16 +60,16 @@ msgid "Installation Completed!"
 msgstr "Installation Completed!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Reboot the device to start using Crystal Linux!"
+msgid "Reboot the device to start using NimaOS!"
+msgstr "Reboot the device to start using NimaOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Reboot"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Installing Crystal"
+msgid "Installing NimaOS"
+msgstr "Installing NimaOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -149,10 +153,10 @@ msgstr "Select Installation Disk"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install NimaOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install NimaOS on. This will wipe the "
 "entire disk you selected."
 
 #: src/pages/partition_screen.ui:107

@@ -1,6 +1,6 @@
 # Jade GUI
 
-The libadwaita/gtk based gui installer using jade as the backend.
+The libadwaita/gtk based gui installer using nimaos-inst as the backend.
 
 ## 💡 Features
 
@@ -31,7 +31,7 @@ For a list of **Jade GUI** maintainers specifically, see [.gitlab/CODEOWNERS](.g
 
 **Install jade-GUI from source using `meson` and `ninja`**
 ```bash
- $ git clone https://github.com/crystal-linux/jade-gui
+ $ git clone https://github.com/NimaOS/jade-gui.git
  $ cd jade-gui
  $ meson --prefix=/usr _build
  $ ninja -C _build
@@ -41,7 +41,7 @@ For a list of **Jade GUI** maintainers specifically, see [.gitlab/CODEOWNERS](.g
 
 **Install jade-GUI as a flatpak using `flatpak-builder`** (Recommended for development)
 ```sh
- $ git clone https://github.com/crystal-linux/jade-gui
+ $ git clone https://github.com/NimaOS/jade-gui.git
  $ cd jade-gui
  $ flatpak-builder --user --install --install-deps-from=flathub --force-clean build-dir al.getcryst.jadegui.yml
  $ flatpak run al.getcryst.jadegui
@@ -53,7 +53,7 @@ For a list of **Jade GUI** maintainers specifically, see [.gitlab/CODEOWNERS](.g
 
 ## 🙌 Contributing
 
-If you'd like to contribute to **Jade GUI**, please follow the [Crystal Linux contributing guidelines](https://git.getcryst.al/crystal/info/-/blob/main/CONTRIBUTING.md)!
+If you'd like to contribute to **Jade GUI**, please follow the [NimaOS contributing guidelines](https://git.getcryst.al/crystal/info/-/blob/main/CONTRIBUTING.md)!
 
 This project uses `meson`, and `ninja` for **Jade GUI** development, please follow the guidelines below:
 

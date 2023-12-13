@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Crystal Linux installieren"
+msgid "Install NimaOS"
+msgstr "NimaOS installieren"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "Über Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Wilkommen in Crystal Linux"
+msgid "Welcome to NimaOS"
+msgstr "Wilkommen in NimaOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Drücken sie Start um Crystal Linux zu installieren!"
+msgid "Press Start to start installing NimaOS!"
+msgstr "Drücken sie Start um NimaOS zu installieren!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,15 +58,15 @@ msgid "Installation Completed!"
 msgstr "Installation abgeschlossen!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Starten sie ihr Gerät neu um Crystal Linux zu benutzen!"
+msgid "Reboot the device to start using NimaOS!"
+msgstr "Starten sie ihr Gerät neu um NimaOS zu benutzen!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Neu Starten"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
+msgid "Installing NimaOS"
 msgstr "Crystal Installieren"
 
 #: src/pages/install_screen.ui:16
@@ -154,10 +154,10 @@ msgstr "Festplatte zum installieren auswählen"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install NimaOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Wählen sie die Festplatte aus, auf der Crystal Linux installiert werden "
+"Wählen sie die Festplatte aus, auf der NimaOS installiert werden "
 "soll. Dies wird alle Daten auf der Festplatte löschen."
 
 #: src/pages/partition_screen.ui:107
