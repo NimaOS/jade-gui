@@ -7,6 +7,7 @@ jade_gui_sources = [
     'layout.py',
     'variant.py',
     'desktop.py',
+    'kernel.py',
     'disk.py',
     'partition.py',
     'locale.py',

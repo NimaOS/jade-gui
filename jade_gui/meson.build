@@ -38,6 +38,7 @@ jade_gui_sources = [
   'window.py',
   'keymaps.py',
   'desktops.py',
+  'kernels.py',
   'manualpartitioning.py'
 ]
 

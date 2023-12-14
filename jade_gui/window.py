@@ -22,6 +22,7 @@ import socket
 from gi.repository import Gtk, Gdk, GLib, Adw
 from jade_gui.classes.partition import Partition
 from jade_gui.widgets.desktop import DesktopEntry
+from jade_gui.widgets.kernel import KernelEntry
 from jade_gui.widgets.disk import DiskEntry
 from jade_gui.widgets.partition import PartitionEntry
 from jade_gui.functions.keyboard_screen import KeyboardScreen
@@ -29,6 +30,7 @@ from jade_gui.functions.timezone_screen import TimezoneScreen
 from jade_gui.functions.locale_screen import LocaleScreen
 from jade_gui.functions.user_screen import UserScreen
 from jade_gui.functions.desktop_screen import DesktopScreen
+from jade_gui.functions.kernel_selection_screen import KernelScreen
 from jade_gui.functions.misc_screen import MiscScreen
 from jade_gui.functions.partition_screen import PartitionScreen
 from jade_gui.functions.summary_screen import SummaryScreen
@@ -39,6 +41,7 @@ from jade_gui.classes.jade_screen import JadeScreen
 from jade_gui.locales.locales_list import locations
 from jade_gui.keymaps import keymaps
 from jade_gui.desktops import desktops
+from jade_gui.kernels import kernels
 from jade_gui.utils import disks
 from jade_gui.utils.threading import RunAsync
 
@@ -73,6 +76,9 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.desktop_screen = DesktopScreen(
             window=self, set_valid=self.page_valid, **kwargs
         )
+        self.kernel_selection_screen = KernelScreen(
+            window=self, set_valid=self.page_valid, **kwargs
+        )
         self.user_screen = UserScreen(window=self, set_valid=self.page_valid, **kwargs)
         self.keyboard_screen = KeyboardScreen(
             window=self, set_valid=self.page_valid, keymaps=keymaps, **kwargs
@@ -100,6 +106,7 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.carousel.append(self.locale_screen)
         self.carousel.append(self.user_screen)
         self.carousel.append(self.desktop_screen)
+        self.carousel.append(self.kernel_selection_screen)
         self.carousel.append(self.misc_screen)
         self.carousel.append(self.partition_screen)
         # self.carousel.append(self.manual_partition)
@@ -136,6 +143,24 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
                     )
                 )
         ### ---------
+        firstkernel = KernelEntry(
+            window=self, kernel=kernels[0], button_group=None, **kwargs
+        )  # Manually specifying GNOME since the other entries need a button group to attach to
+        self.kernel_selection_screen.list_kernels.append(firstkernel)
+        self.kernel_selection_screen.chosen_kernel = (
+            self.kernel_selection_screen.list_kernels.get_row_at_index(0).get_title()
+        )
+        self.kernel_selection_screen.list_kernels.select_row(firstkernel)
+        for kernel in kernels:
+            if kernel != kernels[0]:
+                self.kernel_selection_screen.list_kernels.append(
+                    KernelEntry(
+                        window=self,
+                        kernel=kernel,
+                        button_group=firstkernel.select_button,
+                        **kwargs
+                    )
+                )
 
         ### Test partitions
         self.available_disks = disks.get_disks()

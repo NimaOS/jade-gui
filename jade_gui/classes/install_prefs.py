@@ -39,6 +39,7 @@ class InstallPrefs:
         desktop,
         partition_mode,
         partitions,
+        kernel,
     ):
         self.timezone = timezone
         self.locale = locale
@@ -61,6 +62,7 @@ class InstallPrefs:
         self.is_efi = disks.get_uefi()
         self.bootloader_type = "grub-efi" if self.is_efi else "grub-legacy"
         self.bootloader_location = "/boot/efi/" if self.is_efi else self.disk
+        self.kernel = kernel
 
     def generate_json(self):
         prefs = {
@@ -101,6 +103,6 @@ class InstallPrefs:
                 "efidir": "/dev/null",
                 "bootdev": "/dev/null",
             },
-            "kernel": "linux",
+            "kernel": self.kernel,
         }
         return json.dumps(prefs)

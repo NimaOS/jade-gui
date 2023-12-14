@@ -36,6 +36,7 @@ class UserScreen(JadeScreen, Adw.Bin):
     enable_root_switch = Gtk.Template.Child()
 
     username = ""
+    fullname = ""
     sudo_enabled = True
     root_enabled = True
     username_filled = False
@@ -60,6 +61,7 @@ class UserScreen(JadeScreen, Adw.Bin):
 
     def transform_to_username(self, widget):
         input = self.fullname_entry.get_text()
+        self.fullname = input
 
         username = "".join(input.split(" ")).lower()
         print(username)

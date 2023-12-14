@@ -23,7 +23,7 @@ msgstr "شروع"
 
 #: data/al.getcryst.jadegui.desktop.in:3
 msgid "Install NimaOS"
-msgstr "نصب نیما اواس"
+msgstr "نصب NimaOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -35,11 +35,11 @@ msgstr "درباره Jade GUI"
 
 #: src/window.ui:85
 msgid "Welcome to NimaOS"
-msgstr "به نیما اواس خوش آمدید"
+msgstr "به NimaOS خوش آمدید"
 
 #: src/window.ui:86
 msgid "Press Start to start installing NimaOS!"
-msgstr "برای شروع نصب نیما اواس، دکمه شروع را فشار دهید!"
+msgstr "برای شروع نصب NimaOS، دکمه شروع را فشار دهید!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -77,7 +77,7 @@ msgstr "نصب کامل شد!"
 
 #: src/pages/finished_screen.ui:16
 msgid "Reboot the device to start using NimaOS!"
-msgstr "برای شروع استفاده از نیما اواس، دستگاه خود را راه اندازی مجدد کنید!"
+msgstr "برای شروع استفاده از NimaOS، دستگاه خود را راه اندازی مجدد کنید!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
@@ -85,7 +85,7 @@ msgstr "راه اندازی مجدد"
 
 #: src/pages/install_screen.ui:15
 msgid "Installing NimaOS"
-msgstr "درحال نصب نیما اواس"
+msgstr "درحال نصب NimaOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -172,7 +172,7 @@ msgid ""
 "Select the disk you want to install NimaOS on. This will wipe the entire disk "
 "you selected."
 msgstr ""
-"دیسکی را که می خواهید نیما اواس روی آن نصب کنید انتخاب کنید. با این کار کل دیسکی. "
+"دیسکی را که می خواهید NimaOS روی آن نصب کنید انتخاب کنید. با این کار کل دیسکی. "
 "که انتخاب کردید، پاک می‌شود"
 
 #: src/pages/partition_screen.ui:107

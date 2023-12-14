@@ -163,7 +163,7 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             ).partition
             partitions.append(partition.generate_jade_entry())
 
-
+        print(self.window.kernel_selection_screen.chosen_kernel)
         self.installprefs = InstallPrefs(
             timezone=self.window.timezone_screen.chosen_timezone,
             locale=self.window.locale_screen.chosen_locales,
@@ -180,5 +180,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             desktop=self.window.desktop_screen.chosen_desktop,
             partition_mode=self.window.partition_mode,
             partitions=partitions,
+            kernel=self.window.kernel_selection_screen.chosen_kernel,
         )
         print(self.installprefs.generate_json())
