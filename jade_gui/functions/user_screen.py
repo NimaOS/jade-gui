@@ -113,13 +113,11 @@ class UserScreen(JadeScreen, Adw.Bin):
             self.password_filled = True
             self.verify_continue()
             self.password_confirmation.remove_css_class("error")
-            self.password = self.encrypt_password(self.password_entry.get_text())
+            # self.password = self.encrypt_password(self.password_entry.get_text())
+            self.password = self.password_entry.get_text()
             # self.password = (
             #     "'" + self.encrypt_password(self.password_entry.get_text()) + "'"
             # )
-            self.password = (
-                "'" + self.password_entry.get_text() + "'"
-            )
 
         else:
             self.password_filled = False
