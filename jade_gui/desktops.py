@@ -1,3 +1,3 @@
 desktops = [
-    "gnome",
+    "GNOME",
 ]
